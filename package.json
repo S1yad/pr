@@ -1,0 +1,23 @@
+{
+  "name": "ejs_ex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node ./src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/preset-env": "^7.10.2"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "ejs": "^1.0.0",
+    "express": "^4.12.2",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.18"
+  }
+}

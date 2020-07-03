@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .header{
+            width: 100%;height: 60px;}
+        
+        .name{
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+            margin-left: 600px;
+            margin-top: 1px;
+            position: absolute;
+            margin-top: -50px;
+        }
+        .main{
+            height:100% ;background:white;margin-left: 160px;margin-right: 160px;margin-top: 30px;
+        }
+        .img{
+            margin-left: 500px;
+            height: 70px;
+
+        }
+        .quation{
+            font-size: 30px;font-family: 'Courier New', Courier, monospace; color: palevioletred;
+        }
+        .quat{
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+        }
+        .border1{
+            border-bottom:2px solid pink;
+        }
+        
+        .quation_1 form {
+  width: auto;
+  float: right;
+  margin-right: 500px;
+}
+.quation_1 input {
+  width: 200px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 1px solid pink;
+  background: #F9F0DA;
+  outline: none;
+  position: relative;
+  
+}
+.butt{
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color:palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0,0,0,.1);
+            transition: .3s;
+            margin-left: 50px;
+}
+.butt:hover:hover {
+  background:pink;
+  box-shadow: 0 15px 20px pink;
+  color: white;
+  transform: translateY(-7px);
+        }
+        .right_bar{
+            height:100% ;
+            margin-left: 1170px;
+            margin-top: -460px;
+        }
+    .log_out{
+        
+        text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color:palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0,0,0,.1);
+            transition: .3s;
+            margin-left: 20px;
+
+    }
+    .log_out:hover:hover {
+  background:pink;
+  box-shadow: 0 15px 20px pink;
+  color: white;
+  transform: translateY(-7px);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="img">
+            <img src="logo.png">
+        </div>
+        <div>
+            <h1 class="name">flamingo</h1>
+        </div>
+        <hr class="border1"/>
+        </div>
+        <div class="main">
+    <% for (let i of data) { %>
+    <form action="/quationPage?id=<%= i.id %>" method="POST" class="quation">
+        <%= i.title %>
+        <button type="submit" class="butt">Submit</button>
+    </form>
+    <% } %>
+    <hr class="border1"/>
+    <form action="/newQuation" method="post" id="form" onsubmit="return check()" class="quation_1">
+     <input type="text" name="quation" id="title" placeholder="Title" /> 
+        <textarea name="description" id="desc" placeholder="Description" class="quation_1"></textarea> 
+        <button type="submit" class="butt">Submit</button>
+        <p class="quation" id="p"></p>
+    </form>
+</div>
+<div class="right_bar">
+    <form action="/logOut" method="get" id="logOut">
+    <button type="submit" class="log_out">Log out</button>
+    </form>
+</div>
+
+    <script defer>
+        function check() {
+            let title = document.getElementById("title").value;
+            let desc = document.getElementById("desc").value;
+            if (title && desc) return true;
+            else {
+                document.getElementById("p").innerHTML = "All fields must be filled!";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .name{
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+            margin-left: 600px;
+            margin-top: 1px;
+            position: absolute;
+            margin-top: -60px;
+        }
+        .header{
+            width: 100%;height: 60px;
+        }
+        .img{
+            margin-left: 500px;
+            height: 70px;
+
+        }
+        .quation{
+            font-size: 30px;font-family: 'Courier New', Courier, monospace; color: palevioletred;
+        }
+        .butt{
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 400px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color:palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0,0,0,.1);
+            transition: .3s;
+            margin-left: 50px;
+}
+.butt:hover:hover {
+  background:pink;
+  box-shadow: 0 15px 20px pink;
+  color: white;
+  transform: translateY(-7px);
+        }
+.reg form {
+  width: auto;
+  float: right;
+  margin-right: 500px;
+}
+.border1{
+            border-bottom:2px solid pink;
+        }
+.reg input {
+  width: 500px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 1px solid pink;
+  background: #F9F0DA;
+  outline: none;
+  position: relative;
+  
+}
+
+.main{
+            height:100% ;background:white;margin-left: 400px;margin-right: 300px; margin-top: 80px;
+        }
+#email{
+    margin-top: 10px;
+}
+#pass{
+    margin-top: 10px;
+}
+.logIn{
+    font-family: 'Courier New', Courier, monospace;
+    color: palevioletred;
+    font-size: 50px;
+    margin-left: 80px;
+}
+.butt_main{
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 400px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color:palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0,0,0,.1);
+            transition: .3s;
+            margin-left: 50px;
+}
+.butt_main:hover:hover {
+  background:pink;
+  box-shadow: 0 15px 20px pink;
+  color: white;
+  transform: translateY(-7px);
+        
+}
+.border1{
+            border-bottom:2px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="img">
+            <img src="logo.png">
+        </div>
+        <div>
+            <h1 class="name">flamingo</h1>
+        </div>
+        <hr class="border1"/>
+    </div>
+    <div class="main">
+    <form action="/registration" method="post" onsubmit="return check()" class="reg" >
+        <h1 class="logIn">Registration</h1>
+         <input type="text" name="name" id="name" placeholder="Name" /> <br />
+      <input type="email" name="email" id="email" placeholder="Email" /> <br />
+         <input type="password" name="password" id="pass" placeholder="Password" /> <br />
+        <p class="quation" id="p"></p>
+        <button type="submit" class="butt">Submit</button>
+    </form>
+    <form action="/main" method="get">
+        <button type="submit" class="butt_main">Main</button>
+    </form>
+</div>
+
+    <script defer>
+        function check() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+
+            if (name && email && pass) return true;
+            else {
+                let p = document.getElementById("p");
+                p.innerHTML = "All fields must be filled!";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

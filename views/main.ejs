@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .name {
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+            margin-left: 600px;
+            position: absolute;
+            margin-top: -60px;
+
+        }
+
+        .img {
+            margin-left: 500px;
+            height: 70px;
+        }
+
+        .empa {
+            margin-left: 0px;
+        }
+
+        .loog {
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+            font-size: 50px;
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+        }
+
+        .left_bar {
+            width: 160px;
+            height: 100%;
+            background: black;
+            float: left;
+        }
+
+        .main {
+            height: 100%;
+            background: white;
+            margin-left: 160px;
+            margin-right: 160px;
+        }
+
+        .right_bar {
+            height: 100%;
+            background: pink;
+            margin-left: 160px;
+            margin-right: 160px;
+        }
+
+        .question {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+        }
+
+        .quest {
+            border-bottom: 2px solid pink;
+        }
+
+        .ques {
+            margin-bottom: 400px;
+        }
+
+        .quation {
+            font-size: 30px;
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+        }
+
+        .bat {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+        }
+
+        .butt {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+            margin-left: 0px;
+        }
+
+        .butt:hover:hover {
+            background: pink;
+            box-shadow: 0 15px 20px pink;
+            color: white;
+            transform: translateY(-7px);
+        }
+
+        .reg form {
+            width: auto;
+            float: right;
+        }
+
+        .reg input {
+            width: 270px;
+            height: 42px;
+            padding-left: 15px;
+            border-radius: 42px;
+            border: 1px solid pink;
+            background: #F9F0DA;
+            outline: none;
+            position: relative;
+            margin-left: 900px;
+
+        }
+
+        .regis {
+            text-decoration: none;
+            outline: none;
+            display: inline-block;
+            width: 200px;
+            height: 45px;
+            line-height: 45px;
+            border-radius: 45px;
+            border-color: palevioletred;
+            margin: 10px 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 3px;
+            font-weight: 600;
+            color: palevioletred;
+            background: white;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+            transition: .3s;
+            margin-left: 0px;
+        }
+
+        .regis:hover:hover {
+            background: pink;
+            box-shadow: 0 15px 0px pink;
+            color: white;
+            transform: translateY(-7px);
+
+        }
+
+        .log {
+            font-family: 'Courier New', Courier, monospace;
+            color: palevioletred;
+            font-size: 50px;
+            margin-left: 0px;
+        }
+
+        .border1 {
+            border-bottom: 2px solid pink;
+        }
+
+        #email {
+            margin-left: 0px !important;
+        }
+
+        #pass {
+            margin-left: 0px !important;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="img">
+            <img src="./logo.png">
+        </div>
+        <div>
+            <h1 class="name">flamingo</h1>
+        </div>
+        <hr class="border1" />
+    </div>
+    <div class="left_bar">
+    </div>
+    <div id="forms">
+        <form action="/login" method="post" onsubmit="return check()" class="reg">
+            <h2 class="log">Log in</h2>
+            <h4 class="empa">Email:</h4><input type="email" name="email" id="email" /> <br />
+            <h4 class="empa">Password:</h4><input type="password" name="password" id="pass"> <br />
+            <p class="quation" id="p"></p>
+            <button type="submit" class="butt">Submit</button>
+        </form>
+        <form action="/registrationPage" method="get">
+            <button type="submit" class="regis">Registration</button>
+            <h2 class="loog">The questions</h2>
+        </form>
+    </div>
+    <hr />
+    <div class="question"><% for (let i of data) { %>
+        <form action="/quationPage?id=<%= i.id %>" method="POST">
+            <span class="question"><%= i.title %></span>
+            <button type="submit" class="bat">Submit</button>
+            <hr class="quest" />
+        </form>
+        <% } %></div>
+
+    <script class="quat">
+        function check() {
+            let email = document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+            if (email && pass) return true;
+            else {
+                let p = document.getElementById("p");
+                p.innerHTML = "All fields must be filled!";
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
